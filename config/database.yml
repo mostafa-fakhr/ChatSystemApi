@@ -1,0 +1,22 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: "password"
+  host: db
+  port: 3306
+
+development:
+  <<: *default
+  database: chat_system_api_development
+
+test:
+  <<: *default
+  database: chat_system_api_test
+
+production:
+  <<: *default
+  database: chat_system_api_production
+  username: chat_system_api
+  password: <%= ENV["CHAT_SYSTEM_API_DATABASE_PASSWORD"] %>
