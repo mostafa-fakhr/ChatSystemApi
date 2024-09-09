@@ -28,15 +28,8 @@ Ensure that you have the following installed on your machine:
 - [Docker](https://www.docker.com/get-started)
 - [Docker Compose](https://docs.docker.com/compose/)
 
-### Running the Project
 
-To start the project, simply run the following command in the project root directory:
-
-```bash
-docker-compose up
-
-### Running the Project
-Application Endpoints
+### Application Endpoints
 POST /applications: Create a new application
 GET /applications: List all applications
 GET /applications/:token: Show a specific application by token
@@ -52,3 +45,10 @@ POST /applications/:token/chats/:chat_number/messages: Create a new message in a
 GET /applications/:token/chats/:chat_number/messages: List all messages in a specific chat
 PUT /applications/:token/chats/:chat_number/messages/message_number: Update message body
 GET /applications/:token/chats/:chat_number/messages/search?q=query: Search for messages by body content within a chat
+
+### Running the Project
+
+To start the project, simply run the following command in the project root directory:
+
+```bash
+docker-compose up
