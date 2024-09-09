@@ -1,24 +1,36 @@
-# README
+# ChatSystemApi
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+ChatSystemApi is a Ruby on Rails project designed to build a chat system API. The project allows users to create applications with a unique token and name. Each application can manage multiple chats and messages. The system includes Elasticsearch for message searching, MySQL as the main datastore, and Redis for background job processing.
 
-* Ruby version
+## Features
 
-* System dependencies
+- **Applications**: Create and manage applications with unique tokens and names.
+- **Chats**: Each application can have multiple chats, each uniquely numbered.
+- **Messages**: Messages within chats are uniquely numbered and searchable.
+- **Search**: Integrated with Elasticsearch for efficient message searching.
+- **Queueing**: Redis is used for background job processing with Sidekiq.
 
-* Configuration
+## Technologies Used
 
-* Database creation
+- Ruby on Rails
+- MySQL (via Docker)
+- Elasticsearch (via Docker)
+- Redis (via Docker)
+- Sidekiq (for background jobs)
 
-* Database initialization
+## Setup
 
-* How to run the test suite
+### Prerequisites
 
-* Services (job queues, cache servers, search engines, etc.)
+Ensure that you have the following installed on your machine:
+- [Docker](https://www.docker.com/get-started)
+- [Docker Compose](https://docs.docker.com/compose/)
 
-* Deployment instructions
+### Running the Project
 
-* ...
+To start the project, simply run the following command in the project root directory:
+
+```bash
+docker-compose up
