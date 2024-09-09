@@ -34,3 +34,21 @@ To start the project, simply run the following command in the project root direc
 
 ```bash
 docker-compose up
+
+### Running the Project
+Application Endpoints
+POST /applications: Create a new application
+GET /applications: List all applications
+GET /applications/:token: Show a specific application by token
+PUT /applications/:token: Update application name
+
+Chat Endpoints
+POST /applications/:token/chats: Create a new chat for an application
+GET /applications/:token/chats: List all chats for a specific application
+PUT /applications/:token/chats/:chat_number: Update chat name
+
+Message Endpoints
+POST /applications/:token/chats/:chat_number/messages: Create a new message in a chat
+GET /applications/:token/chats/:chat_number/messages: List all messages in a specific chat
+PUT /applications/:token/chats/:chat_number/messages/message_number: Update message body
+GET /applications/:token/chats/:chat_number/messages/search?q=query: Search for messages by body content within a chat
